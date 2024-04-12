@@ -1,0 +1,33 @@
+<input type="text"  id="search" onkeyup="check()">
+
+<div>
+    <h1>one</h1>
+    <h1>two</h1>
+    <h1>three</h1>
+    <h1>four</h1>
+    <h1>five</h1>
+</div>
+
+<script>
+    var enteredText =""
+    var cointainer = document.queryselector("div")
+ var element = cointainer.queryselectorAll("h1")
+    console.log(elements)
+
+    function updatetext(event)
+    {
+        enteredText  = event.target.value.touppercase()
+
+        for(var i=0;i < element.length;i++)
+        {
+           if (elements[i].textcontent.touppercase().indexof(enteredtext) <0)
+        {
+            elements[i].style.display= "none"
+        }
+        else{
+            element[i].style.display="block"
+        }
+       }
+
+    }
+</script>
